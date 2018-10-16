@@ -42,21 +42,17 @@ namespace Elementary_Task_7_8
             int n2 = 1;
             if (leftBorder < rightBorder)
             {
-                Console.WriteLine("Incorect interval input");
-            }
-            else
-            {
                 while (n1 <= rightBorder && leftBorder < rightBorder)
                 {
                     if (n1 >= leftBorder)
                     {
                         yield return n1;
-                        int temp = n1;
-                        n1 = n2;
-                        n2 = temp + n2;
+                        n1 += n2;
+                        n2 += n1;
                     }
                 }
             }
+          
         }
     }
 }
