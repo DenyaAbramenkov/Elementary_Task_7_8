@@ -42,13 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Numeric_Sequences.cs" />
-    <Compile Include="Elementary_Task_7_8.cs" />
+    <Compile Include="Classes\FibonachiSequence.cs" />
+    <Compile Include="Classes\LessThenNSquereSequences.cs" />
+    <Compile Include="Classes\Numeric_Sequences.cs" />
+    <Compile Include="Classes\Task7_8_Sequnces.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI.cs" />
+    <Compile Include="UI\UI_Console.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

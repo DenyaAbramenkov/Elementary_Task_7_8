@@ -13,7 +13,7 @@ namespace Elementary_Task_7_8
     /// <summary>
     /// Main class in the Project
     /// </summary>
-    public class Elementary_Task_7_8
+    public class Task7_8_Sequnces
     {
         /// <summary>
         /// Method Main
@@ -21,7 +21,8 @@ namespace Elementary_Task_7_8
         /// <param name="args">Arguments of comand Line</param>
         public static void Main(string[] args)
         {
-            UI.WorkWithSequences();
+            UI_Console.WorkWithSequences();
+            
         }
     }
 }

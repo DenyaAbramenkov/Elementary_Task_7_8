@@ -13,7 +13,7 @@ namespace Elementary_Task_7_8
     /// <summary>
     /// Class for creating UI
     /// </summary>
-    public class UI
+    public class UI_Console
     {
         /// <summary>
         /// Enum for count of command line args
@@ -29,44 +29,45 @@ namespace Elementary_Task_7_8
         /// </summary>
         public static void WorkWithSequences()
         {
-            Numeric_Sequences n = new Numeric_Sequences();
+            
             string[] args = Environment.GetCommandLineArgs();
             switch (args.Length)
             {
                 case (int)Sequnces.SquereSequences:
                     {
-                        int numberForCompare;
-                        if (int.TryParse(args[1], out numberForCompare))
+                        try
                         {
-                            foreach (int number in n.SquereSequences(numberForCompare))
+                            int numberForCompare = int.Parse(args[1]);
+                            LessThenNSquereSequences lessThenNSquere = LessThenNSquereSequences.NSquereInitialize(numberForCompare);
+                            foreach (int number in lessThenNSquere.GetSequence())
                             {
                                 Console.WriteLine(number);
                             }
                         }
-                        else
+                        catch(Exception)
                         {
-                            WrongInstruction();
+                            WrongInstructionForNSequence();
                         }
-
                         break;
                     }
 
                 case (int)Sequnces.FibonaciSequences:
                     {
-                        int leftBorder;
-                        int rightBorder;
-                        if ((int.TryParse(args[1], out leftBorder) == true) && (int.TryParse(args[2], out rightBorder) == true))
+
+                        try
                         {
-                            foreach (int number in n.FibonacciSequences(leftBorder, rightBorder))
+                            int leftBorder = int.Parse(args[1]);
+                            int rightBorder = int.Parse(args[2]);
+                            FibonachiSequence fibonachiSequence = FibonachiSequence.FibonachiInitialize(leftBorder, rightBorder);
+                            foreach (int number in fibonachiSequence.GetSequence())
                             {
                                 Console.WriteLine(number);
-                            }  
+                            }
                         }
-                        else
+                        catch (Exception)
                         {
-                            WrongInstruction();
+                            WrongInstructionForFibSequence();
                         }
-
                         break;
                     }
 
@@ -79,7 +80,7 @@ namespace Elementary_Task_7_8
         }
 
         /// <summary>
-        /// Instruction for user
+        /// Instruction for users
         /// </summary>
         private static void Instruction()
         {
@@ -94,9 +95,14 @@ namespace Elementary_Task_7_8
         /// <summary>
         /// Instuction if sth wrong
         /// </summary>
-        private static void WrongInstruction()
+        private static void WrongInstructionForNSequence()
         {
             Console.WriteLine("You must input only natural numbers!");
+        }
+        private static void WrongInstructionForFibSequence()
+        {
+            Console.WriteLine("You must input only natural numbers AND" + Environment.NewLine +
+                "LeftBorder should be less or equal to RightBorder");
         }
     }
 }
