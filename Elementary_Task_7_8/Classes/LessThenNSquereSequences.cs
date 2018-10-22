@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Elementary_Task_7_8
 {
-    class LessThenNSquereSequences:Numeric_Sequences
+    public class LessThenNSquereSequences:Numeric_Sequences
     {
         private LessThenNSquereSequences(int leftBorder, int rightBorder) : base(leftBorder, rightBorder)
         {

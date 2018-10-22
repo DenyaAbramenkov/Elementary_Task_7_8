@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elementary_Task_7_8", "Elementary_Task_7_8\Elementary_Task_7_8.csproj", "{98369572-6DFA-478E-9E88-9807DD7583EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequncesUnitTest", "SequncesUnitTest\SequncesUnitTest.csproj", "{28ACF5EA-4F99-44F3-97F0-58BBC2B3FB62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +17,15 @@ Global
 		{98369572-6DFA-478E-9E88-9807DD7583EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98369572-6DFA-478E-9E88-9807DD7583EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98369572-6DFA-478E-9E88-9807DD7583EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28ACF5EA-4F99-44F3-97F0-58BBC2B3FB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28ACF5EA-4F99-44F3-97F0-58BBC2B3FB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28ACF5EA-4F99-44F3-97F0-58BBC2B3FB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28ACF5EA-4F99-44F3-97F0-58BBC2B3FB62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {064A845F-3397-4873-A883-70D257DF4019}
 	EndGlobalSection
 EndGlobal

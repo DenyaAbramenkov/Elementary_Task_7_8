@@ -10,6 +10,8 @@ namespace Elementary_Task_7_8
     {
         private FibonachiSequence(int leftBorder, int rightBorder):base(leftBorder, rightBorder)
         {
+            LeftBorder = leftBorder;
+            RightBorder = rightBorder;
         }
         public static FibonachiSequence FibonachiInitialize(int leftBorder, int rightBorder)
         {

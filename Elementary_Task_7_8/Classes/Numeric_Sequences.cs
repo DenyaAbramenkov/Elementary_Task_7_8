@@ -10,9 +10,6 @@ namespace Elementary_Task_7_8
     using System.Text;
     using System.Threading.Tasks;
     
-    /// <summary>
-    /// Class with Numeric Sequnces
-    /// </summary>
     public abstract class Numeric_Sequences
     {
         public int LeftBorder { get; set; }

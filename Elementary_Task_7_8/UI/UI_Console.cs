@@ -10,30 +10,16 @@ namespace Elementary_Task_7_8
     using System.Text;
     using System.Threading.Tasks;
      
-    /// <summary>
-    /// Class for creating UI
-    /// </summary>
     public class UI_Console
     {
-        /// <summary>
-        /// Enum for count of command line args
-        /// </summary>
-        protected enum Sequnces
-        {
-            SquereSequences = 2,
-            FibonaciSequences = 3
-        }
-
-        /// <summary>
-        /// Working with one of 2 sequnces
-        /// </summary>
         public static void WorkWithSequences()
         {
-            
+            const int SquereSequences = 2;
+            const int FibonaciSequences = 3;
             string[] args = Environment.GetCommandLineArgs();
             switch (args.Length)
             {
-                case (int)Sequnces.SquereSequences:
+                case SquereSequences:
                     {
                         try
                         {
@@ -50,8 +36,7 @@ namespace Elementary_Task_7_8
                         }
                         break;
                     }
-
-                case (int)Sequnces.FibonaciSequences:
+                case FibonaciSequences:
                     {
 
                         try
@@ -78,10 +63,6 @@ namespace Elementary_Task_7_8
                     }
             }
         }
-
-        /// <summary>
-        /// Instruction for users
-        /// </summary>
         private static void Instruction()
         {
             Console.WriteLine("Instructions for working with the program:" + Environment.NewLine +
@@ -91,10 +72,6 @@ namespace Elementary_Task_7_8
                 "To choose first mode, enter 1 parameter" + Environment.NewLine +
                 "To choose second mode, enter 2 parameter"); 
         }
-
-        /// <summary>
-        /// Instuction if sth wrong
-        /// </summary>
         private static void WrongInstructionForNSequence()
         {
             Console.WriteLine("You must input only natural numbers!");
